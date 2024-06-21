@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-ul{
+    display: flex;
+     align-items: center;
+    justify-content: end;
+    gap: 20px;
+    list-style: none;
+    margin-right: 20px; 
+    background-color: skyblue;
+    padding: 5px;
+} 
+
+.nav-ul li a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.pop{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: skyblue;
+    
+}
+
+.topainput{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid darkblue;
+    border-radius: 50px;
+    width: 300px;
+}
+
+.polabut{
+    padding: 15px;
+    background-color: skyblue;
+    border:none;
+    border-radius: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login{
+    margin-left: 30%;
+    margin-top: 100px;
+}
+
+
+.pli{
+    width: 45px;
+    float: left;
+    
+} 
+
+.pro{
+    margin-left: 30%;
+    margin-top: 25px;
+    
+}
+
+.proh1{
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.tiopa{
+    color: red;
+    margin-left: 20px;
+    margin-top: -10px;
+    display: block;
+}
+
+
+.kelpop{
+     text-align: center;
+     margin-top: 50px;
+}
+
+.kelpop ul li{
+    display: inline-block;
+    border: 1px solid skyblue;
+    padding: 5px;
+    width: 100px;
+}
+
+.dfer{
+    margin-bottom: 15px;
+}
+
+.tikap{
+    color: darkblue;
+    background-color: skyblue;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.polabt{
+    color: darkblue;
+    background-color: skyblue;
+}
+
+.loip{
+    width: 250px;
+    margin-bottom: 25px;
+    padding: 7px;
+    border-radius: 50px;
+    border: 1px solid black;
+    font-weight: bold;
+    margin-left: 10px;
+}
