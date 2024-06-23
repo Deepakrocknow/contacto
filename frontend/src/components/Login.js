@@ -9,7 +9,7 @@ const Login =  ()=> {
     
   const handlelogin =async()=>{
     console.log(name,pass);
-    let result = await fetch('http://localhost:4500/login',{
+    let result = await fetch('https://pop-nu.vercel.app/login',{
           method:'post',
           body:JSON.stringify({name,pass}),
           headers:{
