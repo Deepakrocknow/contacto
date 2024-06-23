@@ -101,7 +101,7 @@ function verifytok(req,resp,next){
       console.log(token)
       if(token){
           jwt.verify(token,jwtkey,(err,valid)=>{
-              if(err){
+              if(!err){
                  resp.send("kuch gadbad hai")
               }
               else{
