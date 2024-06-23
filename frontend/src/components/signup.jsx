@@ -16,7 +16,7 @@ const Signup = () => {
 
   const collectData =async()=>{
          console.log(name,email,pass);
-         let result = await fetch('https://pop-nu.vercel.app/register',{
+         let result = await fetch('https://backreal.vercel.app/register',{
                method:'post',
                body:JSON.stringify({name,email,pass}),
                headers:{
