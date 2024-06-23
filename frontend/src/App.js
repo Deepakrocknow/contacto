@@ -20,9 +20,7 @@ function App() {
             <Route path='/' element={<Productlist/>}/>
             <Route path='/add' element={<Addproduct/>}/>
             <Route path='/update/:id' element={<Updatecom/>}/>
-            <Route path='/profile' element={<h1>profile1</h1>}/>
             </Route>
-            
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/login' element={<Login/>}/>
          </Routes> 

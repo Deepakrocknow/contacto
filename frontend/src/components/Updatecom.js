@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useParams,useNavigate } from 'react-router-dom';
 
 const Updatecom = () => {
-    const [name,setName] = useState("");
-    const [price,setPrice] = useState("");
-    const [category,setCategory] = useState("");
-    const [company,setCompany] = useState("");
+  const [name,setName] = useState("");
+  const [phone,setPhone] = useState("");
+  const [email,setEmail] = useState("");
+  const [linkedin,setLinkedin] = useState("");
+  const [twitter,setTwitter] = useState("");
     const params = useParams();
     const navigate = useNavigate();
 
@@ -21,16 +22,17 @@ const Updatecom = () => {
         })
         resp = await resp.json();
         setName(resp.name);
-        setPrice(resp.price)
-        setCompany(resp.company);
-        setCategory(resp.category);
+        setPhone(resp.phone)
+        setEmail(resp.email);
+        setLinkedin(resp.linkedin);
+        setTwitter(resp.twitter);
         console.log(resp)
     }
     
     const updatePro = async()=>{
         let rest = await fetch(`http://localhost:4500/prod/${params.id}`,{
             method:'put',
-            body:JSON.stringify({name,price,category,company}),
+            body:JSON.stringify({name,phone,email,linkedin,twitter}),
             headers:{
                'Content-Type':'application/json',
               authorization:JSON.parse(localStorage.getItem('token'))
@@ -44,10 +46,11 @@ const Updatecom = () => {
   return (
     <div className='pro'>
         <h1 className=' proh1'>Update Product</h1>
-         <input className='topainput' type='text'  value={name} onChange={(e)=>setName(e.target.value)} placeholder='product name'/>
-         <input className='topainput' type='text'  value={price} onChange={(e)=>setPrice(e.target.value)} placeholder='product price'/>
-         <input className='topainput' type='text'  value={category} onChange={(e)=>setCategory(e.target.value)} placeholder='product category'/>
-         <input className='topainput' type='text'  value={company} onChange={(e)=>setCompany(e.target.value)} placeholder='product company'/>
+        <input className='topainput' type='text'  value={name} onChange={(e)=>setName(e.target.value)} placeholder='product name'/>
+         <input className='topainput' type='text'  value={phone} onChange={(e)=>setPhone(e.target.value)} placeholder='product phone'/>
+         <input className='topainput' type='text'  value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='product email'/>
+         <input className='topainput' type='text'  value={linkedin} onChange={(e)=>setLinkedin(e.target.value)} placeholder='product linkedin'/>
+         <input className='topainput' type='text'  value={twitter} onChange={(e)=>setTwitter(e.target.value)} placeholder='product linkedin'/>
          <button onClick={updatePro}  className='polabut'>Update product</button>
          
     </div>

@@ -11,7 +11,7 @@
     list-style: none;
     margin-right: 20px; 
     background-color: skyblue;
-    padding: 5px;
+    padding: 15px;
 } 
 
 .nav-ul li a{
@@ -24,8 +24,9 @@
     position: absolute;
     bottom: 0;
     text-align: center;
-    width: 100%;
+    width: 98%;
     background-color: skyblue;
+    padding: 15px;
     
 }
 
@@ -88,12 +89,14 @@
 .kelpop ul li{
     display: inline-block;
     border: 1px solid skyblue;
-    padding: 5px;
-    width: 100px;
+    padding: 7px;
+    width: 180px;
 }
 
 .dfer{
     margin-bottom: 15px;
+    font-size: 25px;
+    color: darkblue;
 }
 
 .tikap{
@@ -106,14 +109,35 @@
 .polabt{
     color: darkblue;
     background-color: skyblue;
+    cursor: pointer;
 }
 
 .loip{
-    width: 250px;
+    width: 350px;
     margin-bottom: 25px;
-    padding: 7px;
+    padding: 10px;
     border-radius: 50px;
     border: 1px solid black;
     font-weight: bold;
     margin-left: 10px;
+
+}
+
+
+.regis{
+    margin-left: 30%;
+    margin-top: 100px;
+
+}
+
+.head{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.but{
+    color: darkblue;
+    background-color: skyblue;
+    margin-left: 10px;
+    cursor: pointer;
 }

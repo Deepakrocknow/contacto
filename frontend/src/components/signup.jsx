@@ -33,7 +33,7 @@ const Signup = () => {
   }
 
   return (
-    <div Style="margin-left:30%;">
+    <div className='regis'>
         <h1 Style="margin:15px">Register</h1>
         <input className='topainput' type='text' value={name} onChange={(e)=>setName(e.target.value)} placeholder='enter name'/>
         <input className='topainput' type='email' value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='enter email'/>

@@ -55,14 +55,15 @@ const Productlist = () => {
 
   return (
       <div className='kelpop'>
-        <h3 className='dfer'>Product list</h3>
+        <h3 className='dfer'>Contact list</h3>
         <input className='loip' type='text' placeholder='Search product' onChange={searcHandle}/>
-        <ul>
+        <ul className='head'>
             <li>S. No</li>
             <li>Name</li>
-            <li>Price</li>
-            <li>category</li>
-            <li>company</li>
+            <li>Phone</li>
+            <li>Email</li>
+            <li>Linkedin</li>
+            <li>Twitter</li>
             <li>Operation</li>
         </ul>
         {
@@ -70,12 +71,13 @@ const Productlist = () => {
              <ul key={e._id}>
             <li>{item+1}</li>
             <li>{e.name}</li>
-            <li>{e.price}</li>
-            <li>{e.category}</li>
-            <li>{e.company}</li>
+            <li>{e.phone}</li>
+            <li>{e.email}</li>
+            <li>{e.linkedin}</li>
+            <li>{e.twitter}</li>
             <li>
               <button  onClick={()=>deleproduct(e._id)} className='polabt'>Delete</button>
-              <Link className='tikap' to={'/update/'+e._id }>Update</Link>
+              <Link className='' to={'/update/'+e._id }><button className='but'>Update</button></Link>
               </li>
              </ul>
             )

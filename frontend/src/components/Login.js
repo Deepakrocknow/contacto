@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const Login =  ()=> {
-    const [email,setEmail] = useState("");
+    const [name,setName] = useState("");
     const [pass,setPass] = useState('');
     const navigate = useNavigate();
 
     
   const handlelogin =async()=>{
-    console.log(email,pass);
+    console.log(name,pass);
     let result = await fetch('http://localhost:4500/login',{
           method:'post',
-          body:JSON.stringify({email,pass}),
+          body:JSON.stringify({name,pass}),
           headers:{
               'Content-Type':'application/json'
           }
@@ -31,10 +31,10 @@ const Login =  ()=> {
 
   return (
     <div className='login'>
-        <input className='topainput' type='text' value={email} placeholder='enter email' onChange={(e)=>{setEmail(e.target.value)}}/>
+        <h1 Style="margin:15px">Login</h1>
+        <input className='topainput' type='text' value={name} placeholder='enter name' onChange={(e)=>{setName(e.target.value)}}/>
         <input className='topainput' type='password' value={pass} placeholder='enter password' onChange={(e)=>{setPass(e.target.value)}}/>
         <button onClick={handlelogin} type='button' className='polabut'>Log-in</button>
-        
     </div> 
   )
 }

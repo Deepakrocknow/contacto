@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
-const jwtkey  = 'e-comm'
+const jwtkey  = 'as2809'
 
 require('./db/config');
 
@@ -12,7 +12,7 @@ const product = require('./db/product');
 app.use(express.json());
 app.use(cors());
 
-app.post('/register',async(req,resp)=>{
+app.post('/register',async(req,resp)=>{ 
     let ans = await new user(req.body);
     let res = await ans.save()
     res = res.toObject();
@@ -20,7 +20,7 @@ app.post('/register',async(req,resp)=>{
     console.log(res);
     jwt.sign({res},jwtkey,{expiresIn:'2h'},(err,token)=>{
       if(err){
-        resp.send("we messed up");
+        resp.send("It messed up");
       }
       resp.send({res,auth:token});
     })
@@ -28,7 +28,7 @@ app.post('/register',async(req,resp)=>{
 
 app.post('/login',async(req,resp)=>{
       console.log(req.body);
-      if(req.body.pass && req.body.email){
+      if(req.body.pass && req.body.name){
         let ans = await user.findOne(req.body).select("-pass");
         if(ans){
           jwt.sign({ans},jwtkey,{expiresIn:'2h'},(err,token)=>{
@@ -86,9 +86,10 @@ app.get('/search/:key',verifytok,async(req,resp)=>{
      let res = await product.find({
         "$or":[
           {name:{$regex:req.params.key}},
-          {price:{$regex:req.params.key}},
-          {company:{$regex:req.params.key}},
-          {category:{$regex:req.params.key}},
+          {phone:{$regex:req.params.key}},
+          {email:{$regex:req.params.key}},
+          {linkedin:{$regex:req.params.key}},
+          {twitter:{$regex:req.params.key}},
         ]
      })
      resp.send(res)
