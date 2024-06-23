@@ -1,6 +1,7 @@
 {
     "version": 2,
     "name": "music-album",
+    { "rewrites": [{ "source": "/(.*)", "destination": "/" }] },
     "builds": [
        { "src": "app.js", "use": "@vercel/node" }
     ],
