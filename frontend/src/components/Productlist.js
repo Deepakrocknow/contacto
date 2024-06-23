@@ -10,7 +10,7 @@ const Productlist = () => {
     },[])
 
     const getproduct = async()=>{
-         let res = await fetch('https://pop-nu.vercel.app/products',{
+         let res = await fetch('https://backreal.vercel.app/products',{
               headers:{
                  authorization:JSON.parse(localStorage.getItem('token'))
               }
@@ -21,7 +21,7 @@ const Productlist = () => {
     }
  
     const deleproduct = async(id)=>{
-          let res = await fetch(`https://pop-nu.vercel.app/prod/${id}`,{
+          let res = await fetch(`https://backreal.vercel.app/prod/${id}`,{
             method:'delete',
             headers:{
                authorization:JSON.parse(localStorage.getItem('token'))
@@ -36,7 +36,7 @@ const Productlist = () => {
     const searcHandle = async(event)=>{
        let key = event.target.value;
        if(key){
-        let rest = await fetch(`https://pop-nu.vercel.app/search/${key}`,{
+        let rest = await fetch(`https://backreal.vercel.app/search/${key}`,{
          headers:{
             authorization:JSON.parse(localStorage.getItem('token'))
          }
