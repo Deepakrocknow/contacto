@@ -19,7 +19,7 @@ const Addproduct = () => {
         console.log(name,phone,email,linkedin);
         const userId = JSON.parse(localStorage.getItem('user'))._id;
         
-        let res = await fetch('https://pop-nu.vercel.app/addpro',{
+        let res = await fetch('https://backreal.vercel.app/addpro',{
             method:'post',
             body:JSON.stringify({name,phone,email,linkedin,twitter,userId,}),
             headers:{
