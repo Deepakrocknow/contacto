@@ -15,7 +15,7 @@ const Updatecom = () => {
     },[])
 
     const getdetail = async()=>{
-        let resp = await fetch(`https://pop-nu.vercel.app/prod/${params.id}`,{
+        let resp = await fetch(`https://backreal.vercel.app/prod/${params.id}`,{
           headers:{
             authorization:JSON.parse(localStorage.getItem('token'))
          }
@@ -30,7 +30,7 @@ const Updatecom = () => {
     }
     
     const updatePro = async()=>{
-        let rest = await fetch(`https://pop-nu.vercel.app/prod/${params.id}`,{
+        let rest = await fetch(`https://backreal.vercel.app/prod/${params.id}`,{
             method:'put',
             body:JSON.stringify({name,phone,email,linkedin,twitter}),
             headers:{
